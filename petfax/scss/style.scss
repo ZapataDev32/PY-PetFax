@@ -1,0 +1,44 @@
+@use "config";
+@use "pets.scss";
+@use "facts.scss";
+
+body {
+  //   background: var(--light-accent);
+  background: $background-color;
+  font-family: $body-font;
+
+  //   font-family: var(--body-font);
+}
+
+.container {
+  width: 50%;
+  margin: 2em auto;
+  padding: 1em 3em 3em 3em;
+  border-radius: 1em;
+  background: white;
+  box-shadow: 2px 2px #ddd;
+}
+h1 {
+  margin: 0;
+  color: $primary-color;
+  font-family: "Bowlby One", impact;
+  font-size: 4em;
+  text-align: center;
+}
+h2 {
+  color: var(--second-accent);
+  margin: 0.5em 0;
+}
+a {
+  font-family: var(--accent-font);
+  text-decoration: none;
+  color: var(--main-accent);
+}
+.callout {
+  background: #eee;
+  padding: 0.5em;
+  border-radius: 1em;
+  text-align: center;
+  font-family: var(--accent-font);
+  font-weight: 400;
+}

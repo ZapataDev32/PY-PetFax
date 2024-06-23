@@ -1,0 +1,18 @@
+/* PETS */
+.pets-container {
+  width: 100%;
+  @include config.flex-center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em 0;
+}
+.pets-container img {
+  width: 100%;
+  border-radius: 1em;
+  display: block;
+  margin-bottom: 0.5em;
+}
+.pet {
+  width: 46%;
+  margin: 0 0.5em;
+}

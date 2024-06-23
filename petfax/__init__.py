@@ -1,5 +1,5 @@
 from flask import Flask
-
+from flask_assets import Environment, Bundle
 from flask_migrate import Migrate
 
 import os
@@ -10,7 +10,10 @@ load_dotenv()
 def create_app():
     app = Flask(__name__)
     app.config['TEMPLATES_AUTO_RELOAD'] = True
+    assets = Environment(app)
 
+    sass_bundle = Bundle('./static/style.scss', filters='libsass', output='./style.css')
+    assets.register('sass_all', sass_bundle)
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("MY_KEY")
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
